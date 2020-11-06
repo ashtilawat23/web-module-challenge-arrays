@@ -64,7 +64,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(arrayTest){
-    if (arrayTest === 31) {return true}
+    if (arrayTest.length === 31) {return true}
     else {return false}
 }
 
@@ -135,9 +135,9 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(arry, flav) {
-    for (i = 0; i < arry.length; i++) {
-        if (arry[i] === flav) {
-            arry.splice(i, 1);
+    for (let j=0;j<arry.length;j++) {
+        if (arry[j] === flav) {
+            arry.splice(j, 1);
             return arry;
         }
     }
@@ -165,8 +165,8 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arry, flav) {
-    let sampleArray;
-    for (i = 0; i < arry.length; i++) {
+    let sampleArray = [];
+    for (let i = 0; i < arry.length; i++) {
         if (arry[i].includes(flav)) {
             sampleArray.push(arry[i]);
         }
